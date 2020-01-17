@@ -3,6 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="4f14362c-e32c-4abd-b8ac-16b460083f73" name="Default Changelist" comment="">
       <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/delete.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/folder_of_user/abood/3th_folder/google.PNG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/folder_of_user/abood/New Microsoft Word Document.docx" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/folder_of_user/abood/first_folder/gkldfng/google.PNG" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/folder_of_user/abood/first_folder/test.html" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/folder_of_user/abood/test.html" afterDir="false" />
@@ -84,7 +87,7 @@
       <workItem from="1579159172029" duration="288000" />
       <workItem from="1579159508511" duration="13302000" />
       <workItem from="1579179543314" duration="10266000" />
-      <workItem from="1579276455848" duration="8187000" />
+      <workItem from="1579276455848" duration="9221000" />
     </task>
     <servers />
   </component>

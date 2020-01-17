@@ -12,7 +12,15 @@ if (isset($_SESSION['user'])){
 <head>
     <title> File Management </title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
+    <style>
+        .R{
+            background-image: linear-gradient(180deg, red, orange, yellow, green, blue, navy, purple);
+            -webkit-background-clip: text;
+            color: transparent;
+            font-weight: bold;
+            font-size: 15px;
+        }
+    </style>
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -105,18 +113,18 @@ if (isset($_SESSION['user'])){
                 echo "<tr>";
                 if ($value != '.' && $value != '..' )
                 {
-                    echo "<th >$value</th>";
-                    echo "<th>".get_type_of_file($current_path. "/". $value)."</th>";
-                    echo "<th >".get_date_of_file($current_path. "/". $value)."</th>";
+                    echo "<th class='R'>$value</th>";
+                    echo "<th class='R'>".get_type_of_file($current_path. "/". $value)."</th>";
+                    echo "<th class='R'>".get_date_of_file($current_path. "/". $value)."</th>";
                     if (is_dir($current_path. "/". $value))
                     {
                         $folder = "file_mangment.php?another-path=$current_path/$value";
                         $delete_folder = "file_mangment.php?delete_folder=$current_path/$value";
-                        echo  "<th >".'<a href="'.$folder.'" style="margin:15px;"  target="_blank" >view</a>'.'<a href="'.$delete_folder .'" >delete</a>'."</th>";
+                        echo  "<th class='R'>".'<a href="'.$folder.'" style="margin:15px;"  target="_blank" >view</a>'.'<a href="'.$delete_folder .'" >delete</a>'."</th>";
                     }else{
-                        echo  "<th >".'<a href="view.php?show_file='.$current_path.'/'.$value .'" style="margin:15px;"  target="_blank" >view</a>'.'<a href="file_mangment.php?fileDelete='.$current_path.'/'.$value .'" >delete</a>' .  "</th>";
+                        echo  "<th class='R' >".'<a href="view.php?show_file='.$current_path.'/'.$value .'" style="margin:15px;"  target="_blank" >view</a>'.'<a href="file_mangment.php?fileDelete='.$current_path.'/'.$value .'" >delete</a>' .  "</th>";
                     }
-                    echo  "<th >".'<input type="checkbox" name="checkbox">'."</th>";
+                    echo  "<th class='R' >".'<input type="checkbox" name="checkbox">'."</th>";
                     echo  "</tr>";
                 }
 
@@ -179,41 +187,30 @@ if (isset($_POST['submit-folder']))
     if (isset($_GET['delete_folder']))
     {
            $detele_folder = $_GET['delete_folder'];
-        deleteDirectory($detele_folder);
-        header("refresh: 0");
-
+           deleteDirectory($detele_folder);
     }
     function deleteDirectory($dir) {
         if (!file_exists($dir)) {
             return true;
         }
-
         if (!is_dir($dir)) {
             return unlink($dir);
         }
-
         foreach (scandir($dir) as $item) {
             if ($item == '.' || $item == '..') {
                 continue;
             }
-
             if (!deleteDirectory($dir . DIRECTORY_SEPARATOR . $item)) {
                 return false;
             }
-
         }
-
         return rmdir($dir);
-//        header("file_mangment.php");
     }
 
 //                        delete file
-
-
     if (isset($_GET['fileDelete']))
     {
         unlink($_GET['fileDelete']);
-
     }
 
 //            get type of file or folder
@@ -225,6 +222,7 @@ if (isset($_POST['submit-folder']))
             return pathinfo($filePath,PATHINFO_EXTENSION );
         }
     }
+
 //                get date of create folder or file
     function get_date_of_file($file){
 

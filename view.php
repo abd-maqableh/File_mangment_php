@@ -19,5 +19,12 @@ if (isset($_GET['show_file']))
             header("Content-Length: " . filesize($filename));
             readfile($filename);
         }
+        if ($type === "docx" || $type === "doc")
+        {
+
+            header('Content-disposition: inline');
+            header('Content-type: application/msword'); // not sure if this is the correct MIME type
+            readfile($file);
+        }
     }
 }
