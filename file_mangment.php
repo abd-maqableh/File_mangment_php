@@ -197,7 +197,30 @@ if (isset($_POST['submit-folder']))
 
     if (isset($_GET['delete_folder']))
     {
-        rmdir($_GET['delete_folder']);
+           $detele_folder = $_GET['delete_folder'];
+        deleteDirectory($detele_folder);
+    }
+    function deleteDirectory($dir) {
+        if (!file_exists($dir)) {
+            return true;
+        }
+
+        if (!is_dir($dir)) {
+            return unlink($dir);
+        }
+
+        foreach (scandir($dir) as $item) {
+            if ($item == '.' || $item == '..') {
+                continue;
+            }
+
+            if (!deleteDirectory($dir . DIRECTORY_SEPARATOR . $item)) {
+                return false;
+            }
+
+        }
+
+        return rmdir($dir);
     }
 
 //                        delete file
