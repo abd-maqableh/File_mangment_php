@@ -3,12 +3,17 @@
   <component name="ChangeListManager">
     <list default="true" id="4f14362c-e32c-4abd-b8ac-16b460083f73" name="Default Changelist" comment="">
       <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/folder_of_user/abood/first_folder/gkldfng/google.PNG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/folder_of_user/abood/first_folder/test.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/folder_of_user/abood/test.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/file_mangment.php" beforeDir="false" afterPath="$PROJECT_DIR$/file_mangment.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/folder_of_user/abood/5th_folder/logo-alt.webp" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/folder_of_user/abood/6th_folder/fowl.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/folder_of_user/abood/first_folder/7th_folder/logo.webp" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,6 +31,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP" />
   <component name="ProjectId" id="1WSy0UVfIn5ClNb987JANwdiycG" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -39,8 +45,8 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="project.propDebugger" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../php/php.ini" />
+    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
   </component>
   <component name="RunManager">
     <configuration name="file_mangment.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/file_mangment.php">
@@ -78,7 +84,7 @@
       <workItem from="1579159172029" duration="288000" />
       <workItem from="1579159508511" duration="13302000" />
       <workItem from="1579179543314" duration="10266000" />
-      <workItem from="1579276455848" duration="3928000" />
+      <workItem from="1579276455848" duration="8187000" />
     </task>
     <servers />
   </component>
@@ -89,6 +95,10 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="338" y="68" key="#CLI_Interpreters" timestamp="1579294524494">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="338" y="68" key="#CLI_Interpreters/0.0.1536.824@0.0.1536.824" timestamp="1579294524494" />
     <state x="488" y="0" key="#PHP" timestamp="1579170293484">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -97,18 +107,22 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="361" y="71" key="#TODO/0.0.1536.824@0.0.1536.824" timestamp="1579170193021" />
-    <state x="491" y="105" key="#file_mangment.php" timestamp="1579179572913">
+    <state x="491" y="105" key="#file_mangment.php" timestamp="1579294189334">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="491" y="105" key="#file_mangment.php/0.0.1536.824@0.0.1536.824" timestamp="1579179572913" />
-    <state x="549" y="168" key="FileChooserDialogImpl" timestamp="1579291433537">
+    <state x="491" y="105" key="#file_mangment.php/0.0.1536.824@0.0.1536.824" timestamp="1579294189334" />
+    <state x="549" y="168" key="FileChooserDialogImpl" timestamp="1579294519873">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="549" y="168" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1579291433537" />
-    <state x="277" y="55" key="SettingsEditor" timestamp="1579180222110">
+    <state x="549" y="168" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1579294519873" />
+    <state x="592" y="399" key="NewPhpFileDialog" timestamp="1579298602564">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="277" y="55" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1579180222110" />
+    <state x="592" y="399" key="NewPhpFileDialog/0.0.1536.824@0.0.1536.824" timestamp="1579298602564" />
+    <state x="277" y="55" key="SettingsEditor" timestamp="1579294561146">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="277" y="55" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1579294561146" />
     <state x="470" y="237" key="com.intellij.ide.util.TipDialog" timestamp="1579276455834">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

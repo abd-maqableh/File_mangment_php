@@ -114,7 +114,7 @@ if (isset($_SESSION['user'])){
                         $delete_folder = "file_mangment.php?delete_folder=$current_path/$value";
                         echo  "<th >".'<a href="'.$folder.'" style="margin:15px;"  target="_blank" >view</a>'.'<a href="'.$delete_folder .'" >delete</a>'."</th>";
                     }else{
-                        echo  "<th >".'<a href="?show_file='.$current_path.'/'.$value.'" style="margin:15px;"  target="_blank" >view</a>'.'<a href="file_mangment.php?fileDelete='.$current_path.'/'.$value .'" >delete</a>' .  "</th>";
+                        echo  "<th >".'<a href="view.php?show_file='.$current_path.'/'.$value .'" style="margin:15px;"  target="_blank" >view</a>'.'<a href="file_mangment.php?fileDelete='.$current_path.'/'.$value .'" >delete</a>' .  "</th>";
                     }
                     echo  "<th >".'<input type="checkbox" name="checkbox">'."</th>";
                     echo  "</tr>";
@@ -145,6 +145,7 @@ if (isset($_SESSION['user'])){
                 if(empty($errors)==true)
                 {
                     move_uploaded_file($file_tmp,$current_path."/".$file_name);
+                    header("refresh: 0");
                 }
                 else
                 {
@@ -161,8 +162,8 @@ if (isset($_POST['submit-folder']))
         if (!empty($folder_name))
         {
             mkdir($current_path. '/'. $folder_name,777,true);
-            header("Refresh,0");
-            header("Refresh,0");
+            header("refresh: 0");
+
         }
         else
         {
@@ -171,34 +172,16 @@ if (isset($_POST['submit-folder']))
     }
 
 }
-//                                            show file
-    if (isset($_GET['show_file']))
-    {
-        $file = $current_path . "/".$_GET['show_file'];
-        if (is_file($file)) {
 
-             $type = pathinfo($file,PATHINFO_EXTENSION );
-            if ($type  === 'txt' ||$type  === 'html' ) {
-                readfile($file);
-            }
-            if (exif_imagetype($file) ) {
-                echo ' <img src="data:image/png;base64,'.base64_encode(file_get_contents($file)).'" />';
-            }
 
-            if ($type === "pdf") {
-                $filename = $file;
-                header("Content-type: application/pdf");
-                header("Content-Length: " . filesize($filename));
-                readfile($filename);
-            }
-        }
-    }
 //                            delete folder
 
     if (isset($_GET['delete_folder']))
     {
            $detele_folder = $_GET['delete_folder'];
         deleteDirectory($detele_folder);
+        header("refresh: 0");
+
     }
     function deleteDirectory($dir) {
         if (!file_exists($dir)) {
@@ -221,6 +204,7 @@ if (isset($_POST['submit-folder']))
         }
 
         return rmdir($dir);
+//        header("file_mangment.php");
     }
 
 //                        delete file
@@ -229,6 +213,7 @@ if (isset($_POST['submit-folder']))
     if (isset($_GET['fileDelete']))
     {
         unlink($_GET['fileDelete']);
+
     }
 
 //            get type of file or folder
