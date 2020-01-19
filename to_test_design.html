@@ -1,0 +1,34 @@
+<h1>Landing page </h1>
+<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link" id="pills-profile-tab" data-toggle="pill" role="tab" aria-controls="pills-profile" aria-selected="false" href="login.php" style="text-decoration: darkviolet; font-size: 15px; ">Login</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-profile-tab" data-toggle="pill" role="tab" aria-controls="pills-profile" aria-selected="false" href="index.php" style="text-decoration: darkviolet; font-size: 15px; ">register</a>
+    </li>
+</ul>
+
+<h1 style="margin: 10px; color: coral;"> Sign Up </h1>
+<form method="post" class="container" action=<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>
+    <div class="form-group">
+        <label for="exampleInputEmail1">UserName</label>
+        <input type="text" class="form-control" aria-describedby="emailHelp" name="username" required>
+    </div>
+    <div class="form-group">
+        <label for="exampleInputEmail1">Email</label>
+        <input type="email" class="form-control" aria-describedby="emailHelp" name="email" required>
+    </div>
+    <div class="form-group">
+        <label for="exampleInputPassword1">Password</label>
+        <input type="password" class="form-control" name="password" required>
+    </div>
+    <div class="form-group">
+        <label for="exampleInputPassword1">confirm Password</label>
+        <input type="password" class="form-control" name="confirm-password" required>
+    </div>
+    <button type="submit" class="btn btn-primary" name="submit">Submit</button>
+</form>
+<div style="padding-top: 40px">
+    <a href="login.php" style="text-decoration: darkviolet; font-size: 15px; margin: 195px;"> I am already Register
+        in the website</a>
+</div>

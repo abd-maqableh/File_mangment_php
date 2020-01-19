@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    margin: auto;
+    font-family: 'Raleway', sans-serif;
+}
+
+.header{
+    width: 100%;
+    margin: 0px;
+    background-color: rgb(55, 59, 59);
+    display: flex;
+    height: 56px;
+    justify-content: baseline;
+    
+}
+.logo{
+    justify-content: flex-start;
+    color: white;
+}
+
+.nav{
+    justify-content: flex-end;
+    padding: 13px;
+    width: 1000px;
+   
+}
+.nav >a{
+   margin: 10px;
+   color: cornsilk;
+}
+.color-font{
+    color: rgb(105, 156, 221);
+}
+.gray-color{
+    color: rgb(152, 156, 156);
+  
+}

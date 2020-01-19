@@ -1,45 +1,67 @@
 <?php
 session_start();
- if (isset($_SESSION['user']) )
-{
-    echo $_SESSION['user'];
-}
  ?>
 <!DOCTYPE html>
-<html>
+<html lang="uk">
+
 <head>
     <title>Landing page </title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="style/style_login.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+
+
+
 </head>
+
 <body>
-  <h1>Login page</h1>
-
-    <form method="post" class="container" action=<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>>
-                <div class="form-group">
-                  <label for="exampleInputEmail1">UserName</label>
-                  <input type="text" class="form-control"  aria-describedby="emailHelp"  name="username" required>
+    <div class="grid">
+        <div class="first_side item">
+            <div class="container-first">
+                <div class="SginUp">
+                    <h1>Sign Up </h1>
+                    <p>Sginup with your simple detilas It will be cross chekced by the adminstration </p>
                 </div>
-                <div class="form-group">
-                  <label for="exampleInputPassword1">Password</label>
-                  <input type="password" class="form-control" name="password" required>
+                <div class="SginIn">
+                    <h1>Sign In</h1>
+                    <p>Sign in in your username and password</p>
                 </div>
 
-                <button type="submit" class="btn btn-primary" name="submit">Submit</button>
-    </form>
-  <div style="padding-top: 40px">
-      <a href="index.php" style="text-decoration: darkviolet; font-size: 15px; margin: 195px;">  Register </a>
-  </div>
-  <div style="padding-top: 40px">
-      <a href="logout.php" style="text-decoration: darkviolet; font-size: 15px; margin: 195px;">  logout </a>
-  </div>
+            </div>
+
+        </div>
+        <div class="second-side item">
+
+            <form method="post" action=<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?> style="margin: 170px 215px;">
+                <h5>username</h5>
+                <div class="group">
+                    <input type="text" name="username" class="input" required><span class="highlight"></span><span class="bar"></span>
+                </div>
+                <!-- E-mai -->
+               
+                <!-- password -->
+                <h5>password</h5>
+                <div class="group">
+                    <input type="password" name="password" class="input" required><span class="highlight"></span><span class="bar"></span>
+                </div>
+               
+                <!-- Sign in button -->
+                <div style="margin-top: 110px">
+                <button type="submit" class="btn btn-success" name="submit">Submit</button>
+                <p style="display: inline;margin-left:10px;">or <a href="login.php" style="margin-left: 8px">Log in</a></p>
+                </div>
+           
+
+            </form>
+        </div>
+    </div>
+
+
 <?php
             $jsonfile = file_get_contents("user.json");
-            // echo $jsonf/ile . "<br>";
             $json_to_php = json_decode($jsonfile,true);
-            // print_r($json_to_php);
             if (isset($_POST['submit'])) {
               foreach ($json_to_php as $key => $value) {
-                  // echo $value["username"] . ", " . $value["password"] . "<br>";
                   if ($value["username"] === $_POST["username"] && $value["password"] === $_POST["password"] ) {
                       session_start();
                       $_SESSION['user'] = $_POST["username"];

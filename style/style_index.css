@@ -1,0 +1,136 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    margin: auto;
+    font-family: 'Raleway', sans-serif;
+
+
+}
+h5{
+    text-transform: uppercase;
+}
+.grid{
+    display: grid;
+    grid-template-columns:  1fr 3fr ;
+    grid-template-rows: 720px;
+
+}
+.first_side{
+    background-color: rgb(43, 183, 226);
+    height: 100%;
+    width: 100%;
+
+}
+.container-first{
+    width: 80%;
+    margin: auto;
+}
+.SginUp{
+    margin: 40px;
+    color: cornsilk;
+}
+.SginIn{
+    margin-left: 38px;
+    margin-top: 204px;
+    color: cornsilk;
+}
+
+.second-side{
+  
+    height: 100%;
+    background-color: rgb(213, 224, 213);
+    width: 100%;
+}
+.input {
+	font-size: 18px;
+	padding: 10px 10px 10px 5px;
+	-webkit-appearance: none;
+	display: block;
+    background-color: rgb(213, 224, 213);
+	color: #636363;
+	width: 100%;
+	border: none;
+	border-radius: 0;
+	border-bottom: 1px solid #757575;
+}
+
+.input:focus { outline: none; }
+label {
+	color: #999; 
+	font-size: 18px;
+	font-weight: normal;
+	position: absolute;
+	pointer-events: none;
+	left: 5px;
+	top: 10px;
+	transition: all 0.2s ease;
+}
+.input:focus ~ label, .input.used ~ label {
+	top: -20px;
+  transform: scale(.75); left: -2px;
+	/* font-size: 14px; */
+	color: #4a89dc;
+}
+.bar {
+	position: relative;
+	display: block;
+	width: 100%;
+}
+
+.bar:before, .bar:after {
+	content: '';
+	height: 2px; 
+	width: 0;
+	bottom: 1px; 
+	position: absolute;
+	background: #4a89dc; 
+	transition: all 0.2s ease;
+}
+
+.bar:before { left: 50%; }
+
+.bar:after { right: 50%; }
+
+
+/* active */
+
+.input:focus ~ .bar:before, .input:focus ~ .bar:after { width: 50%; }
+
+
+/* Highlight */
+
+.highlight {
+	position: absolute;
+	height: 60%; 
+	width: 100px; 
+	top: 25%; 
+	left: 0;
+	pointer-events: none;
+	opacity: 0.5;
+}
+
+
+/* active */
+
+.input:focus ~ .highlight {
+	animation: inputHighlighter 0.3s ease;
+}
+
+@keyframes inputHighlighter {
+	from { background: #4a89dc; }
+	to 	{ width: 0; background: transparent; }
+}
+.group { 
+	position: relative; 
+	margin-bottom: 45px; 
+}
+form {
+    width: 500px;
+    margin: 7px 210px;
+	padding: 3em 2em 2em 2em;
+    background-color: rgb(213, 224, 213);
+}
